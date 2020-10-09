@@ -8,6 +8,11 @@ const MongoClient=require('mongodb').MongoClient;
 
 //database connection
 const dbName='hospitalInventory';
+//connecting server file for awt
+let server=require('./server');
+let config=require('./config');
+let middleware=require('./middleware');
+const response=require('express');
 const url='mongodb://localhost:27017';
 let db
 MongoClient.connect(url, (err,client)=>{
